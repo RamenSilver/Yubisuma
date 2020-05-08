@@ -1,9 +1,25 @@
-players = [
-  { "name": "p1", "url": './img/dog.png' },
-  { "name": "p2", "url": "./img/dog.png" },
-  { "name": "p3", "url": "./img/dog.png" },
-  { "name": "p4", "url": "./img/dog.png" },
+players = [{
+    "name": "p1",
+    "url": './img/dog.png'
+  },
+  {
+    "name": "p2",
+    "url": "./img/dog.png"
+  },
+  {
+    "name": "p3",
+    "url": "./img/dog.png"
+  },
+  {
+    "name": "p4",
+    "url": "./img/dog.png"
+  },
 ]
+
+const fingers = {
+  "left": ["./img/leftUp.png", "./img/leftDown.png"],
+  "right": ["./img/rightUp.png", "./img/rightDown.png"]
+};
 
 function rotate() {
   let tmp = players[players.length - 1];
@@ -20,7 +36,7 @@ function rotate() {
     var red = (deg * Math.PI / 180.0);
     var circle_r = $("div.item").width() * 3;
 
-    $('div.item').each(function (i, elem) {
+    $('div.item').each(function(i, elem) {
       var x = Math.cos(red * i) * circle_r + circle_r;
       var y = Math.sin(red * i) * circle_r + circle_r;
       $(elem).css('left', x);
