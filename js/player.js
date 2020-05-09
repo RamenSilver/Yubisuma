@@ -17,8 +17,8 @@ players = [{
 ]
 
 const fingers = {
-  "left": ["./img/leftDown.png", "./img/leftUp.png"],
-  "right": ["./img/rightDown.png", "./img/rightUp.png"]
+  "left": ["./img/myLeftDown.png", "./img/myLeftUp.png"],
+  "right": ["./img/myRightDown.png", "./img/myRightUp.png"]
 };
 
 function rotate() {
