@@ -1,6 +1,3 @@
-$(function () {
-  console.log("a");
-});
 
 //fingerが押された場合
 $(document).on("click", "#left", function() {
