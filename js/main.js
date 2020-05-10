@@ -21,8 +21,8 @@ $(document).on("click", "#right", function() {
 //指が上がっている数を取得
 function countUps() {
   let count = 0;
-  let playersFingers = $("content").find("img");
+  let playersFingers = $(".content").find("img");
   playersFingers.forEach((item) => {
-    if (item.indexOf("Up") != -1 ) {count += 1;}
+    if (item.attr("src").indexOf("Up") != -1 ) {count += 1;}
   });
 }
