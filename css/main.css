@@ -132,36 +132,14 @@ img{
 }
 
 /*モーダル*/
-.modal-wrapper {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background-color: rgba(0, 0, 0, 0.6);
-	z-index: 100;
-	display: none;
+.modal-header {
+  margin: 0 auto;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
-.modal {
-	position: absolute;
-	top: 20%;
-  left: 0;
-  right: 0;
-  margin: auto;
-	background-color: #e6ecf0;
-	padding: 20px 0;
-	border-radius: 10px;
-	width: 450px;
-	height: auto;
-	text-align: center;
-}
-
-.shout-modal {
-  width: 190px;
-  margin: 0 auto 20px;
-  padding: 5px;
-  background-color: #2E9AFE;
-  color: #fff;
-  border-radius: 30px;
+.btn-primary {
+  margin: 2px 0;
+  width: 47px;
+  height: 37px;
 }
