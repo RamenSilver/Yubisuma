@@ -25,4 +25,22 @@ function countUps() {
   playersFingers.forEach((item) => {
     if (item.attr("src").indexOf("Up") != -1 ) {count += 1;}
   });
+  return count;
 }
+function countHands() {
+  let playersFingers = $(".fingers").find("img");
+  let myFingers = $(".my-fingers").find("img");
+  return playersFingers.length + myFingers.length;
+}
+
+$(document).on("click", "#modal", function(){
+  let count = countHands();
+  $("#modal-body").children().remove();
+ for (var i = 0; i < count+1; i++) {
+   $("#modal-body").append('<button type="button" class="btn btn-primary" data-dismiss="modal">'+i+'</button>');
+ }
+});
+
+// $(document).on("click", "#modal-body .btn", function(){
+//   $("#modal-body").children().remove();
+// });
