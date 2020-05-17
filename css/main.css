@@ -2,7 +2,7 @@ body {
   /* background-color: #6495ed; */
   font-family: sans-serif;
   color: #1C1C1C;
-  background-image: url("../img/izakaya.jpg");
+  background-image: url("../img/background.png");
   background-size: cover;
 }
 
@@ -48,7 +48,7 @@ h1 {
   margin:  10px;
   color:  #1C1C1C;
   text-align: center;
-  background-color: #afeeee;
+  background-color: rgba(175,238,238,0.8);;
   border-radius: 10px;
   border: 5px solid #4169e1;
 }
@@ -57,22 +57,38 @@ h1 {
   width: 100px;
   height: 100px;
   margin: 0 auto;
-  background-color: #fff;
 }
 
 .fingers {
   width: 100%;
   height: 100px;
-  background-color: #afeeee;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .left ,.right {
   width: 100px;
   height: 100%;
   margin: 0 2px;
-  background-color: #afeeee;
+}
+
+.clear {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+}
+
+.close {
+  display: none;
+}
+
+h2 {
+  line-height: 100px;
+  color: red;
 }
 
 .my-area {
@@ -96,7 +112,7 @@ h1 {
   height: 100%;
   display: flex;
   justify-content: flex-end;
-  background-color: #98fb98;
+  background-color: rgba(152,251,152,0.8);;
   border: 5px solid #008000;
   border-radius: 10px;
 }
@@ -105,7 +121,6 @@ h1 {
   width: 150px;
   height: 150px;
   margin: 10px;
-  background-color: #98fb98;
   cursor: pointer;
 }
 
@@ -117,11 +132,7 @@ h1 {
   padding: 5px;
   color: #fff;
   font-size: 35px;
-  /* visibility: hidden; */
-}
-
-select {
-  cursor: pointer;
+  visibility: hidden;
 }
 
 img{
@@ -132,6 +143,10 @@ img{
 }
 
 /*モーダル*/
+.modal-dialog {
+  max-width: 540px;
+}
+
 .modal-header {
   margin: 0 auto;
   border-bottom: none;
@@ -140,6 +155,15 @@ img{
 
 .btn-primary {
   margin: 2px;
-  width: 47px;
+  width: 46px;
   height: 37px;
+  padding: 0;
+}
+
+#modal-body2 {
+  text-align: center;
+}
+
+#modal-body2 h2 {
+  font-size: 60px;
 }
