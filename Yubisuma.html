@@ -32,7 +32,7 @@
       <div class="players-area">
         <div class="player">player1
           <div class="face">
-            <img src="./img/toru.png" alt="">
+            <img src="./icon/icon1.png" alt="">
           </div>
           <div class="fingers">
             <div class="left">
@@ -40,12 +40,15 @@
             </div>
             <div class="right">
               <img src="./img/rightDown.png" alt="">
+            </div>
+            <div class="clear close">
+              <h2>CLEAR!!</h2>
             </div>
           </div>
         </div>
         <div class="player">player2
           <div class="face">
-            <img src="./img/toru.png" alt="">
+            <img src="./icon/icon2.png" alt="">
           </div>
           <div class="fingers">
             <div class="left">
@@ -54,11 +57,14 @@
             <div class="right">
               <img src="./img/rightDown.png" alt="">
             </div>
+            <div class="clear close">
+              <h2>CLEAR!!</h2>
+            </div>
           </div>
         </div>
         <div class="player me disable">player3
           <div class="face">
-            <img src="./img/toru.png" alt="">
+            <img src="./icon/icon3.png" alt="">
           </div>
           <div class="fingers">
             <div class="left">
@@ -67,11 +73,14 @@
             <div class="right">
               <img src="./img/rightUp.png" alt="">
             </div>
+            <div class="clear close">
+              <h2>CLEAR!!</h2>
+            </div>
           </div>
         </div>
         <div class="player">player4
           <div class="face">
-            <img src="./img/toru.png" alt="">
+            <img src="./icon/icon4.png" alt="">
           </div>
           <div class="fingers">
             <div class="left">
@@ -79,12 +88,15 @@
             </div>
             <div class="right">
               <img src="./img/rightDown.png" alt="">
+            </div>
+            <div class="clear close">
+              <h2>CLEAR!!</h2>
             </div>
           </div>
         </div>
         <div class="player">player5
           <div class="face">
-            <img src="./img/toru.png" alt="">
+            <img src="./icon/icon5.png" alt="">
           </div>
           <div class="fingers">
             <div class="left">
@@ -92,38 +104,47 @@
             </div>
             <div class="right">
               <img src="./img/rightDown.png" alt="">
+            </div>
+            <div class="clear close">
+              <h2>CLEAR!!</h2>
             </div>
           </div>
         </div>
         <div class="player">player6
           <div class="face">
-            <img src="./img/toru.png" alt="">
+            <img src="./icon/icon6.png" alt="">
           </div>
           <div class="fingers">
             <div class="left">
-              <img src="./img/leftDown.png" alt="">
+              <!-- <img src="./img/leftDown.png" alt=""> -->
             </div>
             <div class="right">
               <img src="./img/rightDown.png" alt="">
+            </div>
+            <div class="clear close">
+              <h2>CLEAR!!</h2>
             </div>
           </div>
         </div>
         <div class="player">player7
           <div class="face">
-            <img src="./img/toru.png" alt="">
+            <img src="./icon/icon7.png" alt="">
           </div>
           <div class="fingers">
             <div class="left">
-              <img src="./img/leftDown.png" alt="">
+              <!-- <img src="./img/leftDown.png" alt=""> -->
             </div>
             <div class="right">
-              <img src="./img/rightDown.png" alt="">
+              <!-- <img src="./img/rightDown.png" alt=""> -->
+            </div>
+            <div class="clear">
+              <h2>CLEAR!!</h2>
             </div>
           </div>
         </div>
         <div class="player">player8
           <div class="face">
-            <img src="./img/toru.png" alt="">
+            <img src="./icon/icon8.png" alt="">
           </div>
           <div class="fingers">
             <div class="left">
@@ -131,6 +152,9 @@
             </div>
             <div class="right">
               <img src="./img/rightDown.png" alt="">
+            </div>
+            <div class="clear close">
+              <h2>CLEAR!!</h2>
             </div>
           </div>
         </div>
@@ -147,14 +171,13 @@
           </div>
         </div>
         <div class="my-numbers">
-          <label for="my-number">指の総数</label>
-          <select class="my-number" name=""></select>
+          <label for="my-number">指の総数(<span></span>)</label>
         </div>
       </div>
 
 
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1" id="modal">
-        modal1
+      <button id="select" type="button" data-toggle="modal" data-target="#modal1" >
+        いくつで勝負？
       </button>
 
       <div class="modal fade" id="modal1" tabindex="-1"
@@ -170,7 +193,28 @@
         </div>
       </div>
 
-      
+      <button id="judge" type="button" data-toggle="modal" data-target="#modal2" >
+        いっせーのっせ
+      </button>
+
+      <div class="modal fade" id="modal2" tabindex="-1"
+        role="dialog" aria-labelledby="label1" aria-hidden="true" data-backdrop='true'>
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="label1">いっせーのっせ！</h4>
+            </div>
+            <div class="modal-body" id="modal-body2">
+              <h2></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <button id="judge" type="button" name="button">ジャッジ</button>
+
     </div>
   </div>
 </body>

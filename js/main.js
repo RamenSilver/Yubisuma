@@ -1,3 +1,10 @@
+$(function(){
+  let count = countHands();
+  $('span').text(count);
+
+
+
+});
 
 //fingerが押された場合
 $(document).on("click", "#left", function() {
@@ -33,14 +40,19 @@ function countHands() {
   return playersFingers.length + myFingers.length;
 }
 
-$(document).on("click", "#modal", function(){
+// モーダル 「いくつで勝負？」
+$(document).on("click", "#select", function(){
   let count = countHands();
   $("#modal-body").children().remove();
  for (var i = 0; i < count+1; i++) {
-   $("#modal-body").append('<button type="button" class="btn btn-primary" data-dismiss="modal">'+i+'</button>');
+   $("#modal-body").append('<button type="button" class="btn btn-primary select" data-dismiss="modal">'+i+'</button>');
  }
 });
 
-// $(document).on("click", "#modal-body .btn", function(){
-//   $("#modal-body").children().remove();
-// });
+
+
+$(document).on("click", ".select", function(){
+  let num = $(this).text();
+  $("#modal-body2 h2").text(num);
+
+});

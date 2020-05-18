@@ -17,30 +17,26 @@
   <script src="./js/login.js" type="text/javascript"></script>
   <link rel="stylesheet" href="./bootstrap-4.4.1-dist/css/bootstrap.css">
   <link rel="stylesheet" href="./css/login.css">
-  <title>指スマゲーム</title>
+  <title>指スマゲーム-ログイン</title>
 </head>
 <body>
-  <form>
-    <h1><span>Life's</span> Game</h1>
+  <form action="Waiting.html" method = "post">
+    <h1>- 指スマゲーム -</h1>
     <div id="icon" data-toggle="modal" data-target="#modal1">
-      <img src="./img/toru.png" alt="">
+      <img src="" alt="" name="icon">
     </div>
-    <input placeholder="Username" type="text"/>
-    <input placeholder="roomID" type="password"/>
-    <button class="btn">Log in</button>
+    <input placeholder="username" type="text" name="username" />
+    <input placeholder="roomID" type="password"  name="roomID" />
+    <input class="btn" type="submit" name ="login" value = "入 室">
 
     <div class="modal fade" id="modal1" tabindex="-1"
-      role="dialog" aria-labelledby="label1" aria-hidden="true" data-backdrop='static'>
+      role="dialog" aria-labelledby="label1" aria-hidden="true" data-backdrop='true'>
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="label1">アイコンを選択してください</h5>
           </div>
           <div class="modal-body" id="modal-body">
-            <img class="select-icon" src="./img/leftUp.png" alt="" data-dismiss="modal">
-            <img class="select-icon" src="./img/leftDown.png" alt="" data-dismiss="modal">
-            <img class="select-icon" src="./img/rightUp.png" alt="" data-dismiss="modal">
-            <img class="select-icon" src="./img/rightDown.png" alt="" data-dismiss="modal">
           </div>
         </div>
       </div>
