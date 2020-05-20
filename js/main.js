@@ -2,7 +2,7 @@ $(function(){
   let count = countHands();
   $('span').text(count);
 
-
+//change
 
 });
 
