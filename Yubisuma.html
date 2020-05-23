@@ -23,14 +23,12 @@
 
 <body>
   <div class="title">
-    <h1>
-      指スマゲーム
-    </h1>
+    <h1>指スマゲーム bd</h1>
   </div>
   <div class="content-wrapper">
     <div class="content">
       <div class="players-area">
-        <div class="player">player1
+        <div class="player" name="player1">player1
           <div class="face">
             <img src="./icon/icon1.png" alt="">
           </div>
@@ -46,7 +44,7 @@
             </div>
           </div>
         </div>
-        <div class="player">player2
+        <div class="player" name="player2">player2
           <div class="face">
             <img src="./icon/icon2.png" alt="">
           </div>
@@ -62,7 +60,7 @@
             </div>
           </div>
         </div>
-        <div class="player me disable">player3
+        <div class="player" name="player3">player3
           <div class="face">
             <img src="./icon/icon3.png" alt="">
           </div>
@@ -71,14 +69,14 @@
               <img src="./img/leftDown.png" alt="">
             </div>
             <div class="right">
-              <img src="./img/rightUp.png" alt="">
+              <img src="./img/rightDown.png" alt="">
             </div>
             <div class="clear close">
               <h2>CLEAR!!</h2>
             </div>
           </div>
         </div>
-        <div class="player">player4
+        <div class="player" name="player4">player4
           <div class="face">
             <img src="./icon/icon4.png" alt="">
           </div>
@@ -94,7 +92,7 @@
             </div>
           </div>
         </div>
-        <div class="player">player5
+        <div class="player" name="player5">player5
           <div class="face">
             <img src="./icon/icon5.png" alt="">
           </div>
@@ -110,13 +108,13 @@
             </div>
           </div>
         </div>
-        <div class="player">player6
+        <div class="player" name="player6">player6
           <div class="face">
             <img src="./icon/icon6.png" alt="">
           </div>
           <div class="fingers">
             <div class="left">
-              <!-- <img src="./img/leftDown.png" alt=""> -->
+              <img src="./img/leftDown.png" alt="">
             </div>
             <div class="right">
               <img src="./img/rightDown.png" alt="">
@@ -126,23 +124,23 @@
             </div>
           </div>
         </div>
-        <div class="player">player7
+        <div class="player" name="player7">player7
           <div class="face">
             <img src="./icon/icon7.png" alt="">
           </div>
           <div class="fingers">
             <div class="left">
-              <!-- <img src="./img/leftDown.png" alt=""> -->
+              <img src="./img/leftDown.png" alt="">
             </div>
             <div class="right">
-              <!-- <img src="./img/rightDown.png" alt=""> -->
+              <img src="./img/rightDown.png" alt="">
             </div>
-            <div class="clear">
+            <div class="clear close">
               <h2>CLEAR!!</h2>
             </div>
           </div>
         </div>
-        <div class="player">player8
+        <div class="player" name="player8">player8
           <div class="face">
             <img src="./icon/icon8.png" alt="">
           </div>
@@ -160,7 +158,15 @@
         </div>
       </div>
       <div class="my-area">
-        <div class="my-fingers-area">
+        <div class="rhythem-area">
+          <div class="rhythem">
+            <div class="out-text">
+              <h4 class="text-one"></h4>
+              <h3 class="text-two"></h3>
+            </div>
+          </div>
+        </div>
+        <div class="my-fingers-area" name="my">
           <div class="my-fingers">
             <div class="my-left" id="left">
               <img src="./img/myLeftDown.png" alt="">
@@ -171,7 +177,13 @@
           </div>
         </div>
         <div class="my-numbers">
-          <label for="my-number">指の総数(<span></span>)</label>
+          <div class="my-number">
+            <div class="">
+              <div class="my-number1">指の総数(<span></span>)</div>
+              <div class="fingersUpSum">上げてる指の総数(<span></span>)</div>  
+            </div>
+
+          </div>
         </div>
       </div>
 
@@ -215,7 +227,7 @@
 
       <button id="judge" type="button" name="button">ジャッジ</button>
 
-    </div>
+
   </div>
 </body>
 
