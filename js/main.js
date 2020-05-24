@@ -1,8 +1,6 @@
 $(function(){
-  let count = countHands();
-  $('.my-number1').find('span').text(count);
 
-  reset();
+reset();
 
 });
 
@@ -28,9 +26,9 @@ $(document).on("click", "#right", function() {
 //指が上がっている数を取得
 function countUps() {
   let count = 0;
-  let playersFingers = $(".content").find("img");
-  playersFingers.forEach((item) => {
-    if (item.attr("src").indexOf("Up") != -1 ) {count += 1;}
+  let playersFingers = $(".fingers ,.my-fingers").find("img");
+  $.each(playersFingers,function(){
+    if ($(this).attr('src').indexOf("Up") != -1 ) {count += 1;}
   });
   return count;
 }
@@ -42,19 +40,18 @@ function countHands() {
   return playersFingers.length + myFingers.length;
 }
 
-//指の総数
-function countHandsUp() {
-  let count = 0;
-  let playersFingers = $(".fingers").find("img").attr("src").indexOf("Up");
-  let myFingers = $(".my-fingers").find("img").attr("src").indexOf("Up");
-  return playersFingers.length + myFingers.length;
-}
-
+// リセット
 function reset() {
+  let count = countHands();
+  $('.numbars').find('span').text(count+"本");
   $(".left").find("img").attr("src", "./img/leftDown.png");
   $(".right").find("img").attr("src", "./img/rightDown.png");
   $(".my-left").find("img").attr("src", "./img/myLeftDown.png");
   $(".my-right").find("img").attr("src", "./img/myRightDown.png");
+  $('.text-two').addClass('hidden');
+  $('.result').text("");
+  $('.hon').text("");
+  $(".answer").text("");
 }
 
 // モーダル 「いくつで勝負？」
@@ -71,21 +68,42 @@ $(document).on("click", "#select", function(){
 $(document).on("click", ".select", function(){
   let num = $(this).text();
 
-  reset();
-  $(".text-one").text("");
-  $(".text-two").text("");
-
   setTimeout(function(){
-    $(".text-one").text("いっせーのっせ！");
+    $('#modal2').modal('show');
   },1000);
 
   setTimeout(function(){
+    $('#modal2').modal('hide');
+  },2000);
 
+  setTimeout(function(){
     userInf();
-    $('.fingersUpSum').find('span').text(countHandsUp());
-
-    $(".text-two").text(num);
+    $(".answer").text(num);
   },2500);
+
+  setTimeout(function(){
+    $('.text-two').removeClass('hidden');
+  },4000);
+
+  setTimeout(function(){
+    $('.result').text(countUps());
+    $('.hon').text("本");
+  },5000);
+
+  setTimeout(function(){
+    judgeReset();
+    judge(num,countUps());
+    $('#modal3').modal('show');
+  },5900);
+
+  setTimeout(function(){
+    $('#modal3').modal('hide');
+  },7800);
+
+  setTimeout(function(){
+    reset();
+  },8500);
+
 
 });
 
@@ -136,5 +154,26 @@ function rightRdm() {
     return "./img/rightUp.png"
   } else {
     return "./img/rightDown.png"
+  }
+}
+
+function judge(num,countUps) {
+  if (num == countUps) {
+    $('#modal3').find('.modal-content').addClass('win');
+    $('#modal3').find('h2').text('Win!!');
+    $('#modal3').find('h3').text('おめでとう');
+  } else {
+    $('#modal3').find('.modal-content').addClass('lose');
+    $('#modal3').find('h2').text('Lose...');
+    $('#modal3').find('h3').text('ざんんねん');
+  }
+}
+
+function judgeReset() {
+  var $modal = $('#modal3').find('.modal-content');
+  if ($modal.hasClass('win')) {
+    $modal.removeClass('win');
+  } else if ($modal.hasClass('lose')) {
+    $modal.removeClass('lose');
   }
 }
