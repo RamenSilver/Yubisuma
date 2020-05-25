@@ -1,24 +1,24 @@
 players = [{
-    "name": "p1",
-    "url": './img/dog.png'
+    'userName': 'p1',
+    'icon': './icon/icon1.png'
   },
   {
-    "name": "p2",
-    "url": "./img/dog.png"
+    'userName': 'p2',
+    'icon': './icon/icon2.png'
   },
   {
-    "name": "p3",
-    "url": "./img/dog.png"
+    'userName': 'p3',
+    'icon': './icon/icon3.png'
   },
   {
-    "name": "p4",
-    "url": "./img/dog.png"
+    'userName': 'p4',
+    'icon': './icon/icon4.png'
   },
 ]
 
 const fingers = {
-  "left": ["./img/myLeftDown.png", "./img/myLeftUp.png"],
-  "right": ["./img/myRightDown.png", "./img/myRightUp.png"]
+  'left': ['./img/myLeftDown.png', './img/myLeftUp.png'],
+  'right': ['./img/myRightDown.png', './img/myRightUp.png']
 };
 
 

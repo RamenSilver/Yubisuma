@@ -118,12 +118,27 @@ h2 {
   font-weight: bold
 }
 
-.rhythem-sey {
-
+.text-one {
+  display: flex;
+  justify-content:center;
+  align-items: baseline;
 }
 
-.rhythem-num {
+.answer {
+  font-size: 50px;
+}
 
+.numbars {
+  font-size: 20px;
+}
+
+
+.hidden {
+  visibility:hidden;
+}
+
+.result {
+  font-size: 40px;
 }
 
 
@@ -152,17 +167,16 @@ h2 {
   cursor: pointer;
 }
 
-.my-numbers {
+.turns-area {
   width: 35%;
   height: 100%;
   padding: 5px;
   display: flex;
   justify-content: flex-start;
-
   /* visibility: hidden; */
 }
 
-.my-number {
+.turns {
   width: 75%;
   height: 100%;
   background-color: #fff;
@@ -186,8 +200,16 @@ img{
 }
 
 /*モーダル*/
-.modal-dialog {
+#modal1 .modal-dialog {
   max-width: 540px;
+}
+
+#modal2 .modal-dialog {
+  max-width: 400px;
+}
+
+#modal2 .modal-content {
+  border: 5px double #ff8c00;
 }
 
 .modal-header {
@@ -203,10 +225,22 @@ img{
   padding: 0;
 }
 
-#modal-body2 {
+.center {
   text-align: center;
 }
 
-#modal-body2 h2 {
-  font-size: 60px;
+.win {
+  background-color: #ffe5e5;
+}
+
+.lose {
+  background-color: #cce5ff;
+}
+
+.lose h2 {
+  color: blue;
+}
+
+.none {
+  /* display: none; */
 }
